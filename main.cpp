@@ -1,10 +1,3 @@
-// -----------------------------------------------------------------
-// HOMEWORK 7 WORD FREQUENCY MAPS
-//
-// You may use all of, some of, or none of the provided code below.
-// You may edit it as you like (provided you follow the homework
-// instructions).
-// -----------------------------------------------------------------
 
 #include <iostream>
 #include <fstream>
@@ -15,9 +8,6 @@
 #include <cassert>
 #include "MersenneTwister.h"
 
-
-
-// ASSIGNMENT: FILL IN YOUR OWN MAP STRUCTURE
 typedef std::map<std::string, int>	word_count_map;
 typedef std::map<std::string, std::map<std::string, int> >  full_map;
 typedef std::map<std::string, std::map<std::string, std::map<std:: string, int> > > deep_map;
@@ -87,8 +77,7 @@ std::vector<std::string> ReadQuotedWords(std::istream &istr) {
 
 // Loads the sample text from the file, storing it in the map data
 // structure. Window specifies the width of the context (>= 2) of the
-// sequencing stored in the map.  parse_method is a placeholder for
-// optional extra credit extensions that use punctuation.
+// sequencing stored in the map. .
 void LoadSampleText(full_map &data, deep_map &deep_data, const std::string &filename, const int &window, 
 					  const std::string &parse_method, std::string &last_word, std::string& last_word2) {
 	// open the file stream
